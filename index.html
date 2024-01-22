@@ -2,17 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Sketch</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
   </head>
 
   <body>
-    <script src="sketch.js"></script>
+    <div class="screen">
+      <script src="sketch.js"></script>
+      <div class="linkAndForm">     
+         <a class="link" href="https://plato.stanford.edu/entries/cellular-automata/supplement.html">List of Rules</a>
+     
+        <form id="ruleForm">
+          <div class="formItem">
+            <label for="ruleValue">Enter rule value:</label><br />
+            <input
+              type="number"
+              id="ruleValue"
+              name="ruleValue"
+              min="0"
+              max="255"
+            /><br />
+          </div>
+          <div class="formItem">
+            <label for="w">Pixel Width:</label><br />
+            <input type="number" id="w" name="w" min="0" max="35" /><br />
+          </div>
+          <div class="formItem">
+            <label for="colorToggle">Toggle Color Mode:</label><br />
+            <input type="checkbox" id="colorToggle" name="colorToggle" /><br />
+          </div>
+  
+          <input class="submitButton" type="submit" value="Submit" />
+        </form>
+      </div>
+   
+    </div>
+    
   </body>
 </html>
