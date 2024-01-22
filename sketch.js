@@ -103,6 +103,9 @@ window.onload = function() {
     console.log(newRuleValue, newW, newColorToggle);
   });
 
+  var toggleButton = document.getElementById('toggleForm');
+  toggleButton.addEventListener('click', toggleForm);
+  toggleButton.addEventListener('touchstart', toggleForm);
 
   document.getElementById('toggleForm').addEventListener('click', function() {
     var form = document.getElementById('ruleForm');
@@ -113,6 +116,8 @@ window.onload = function() {
       form.style.display = "none";
       this.textContent = "Show";
     }
+
   });
+
 
 }
