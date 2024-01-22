@@ -102,4 +102,17 @@ window.onload = function() {
     myp5.resetSketch(newRuleValue, newW, newColorToggle); 
     console.log(newRuleValue, newW, newColorToggle);
   });
+
+
+  document.getElementById('toggleForm').addEventListener('click', function() {
+    var form = document.getElementById('ruleForm');
+    if (form.style.display === "none") {
+      form.style.display = "block";
+      this.textContent = "Hide";
+    } else {
+      form.style.display = "none";
+      this.textContent = "Show";
+    }
+  });
+
 }
